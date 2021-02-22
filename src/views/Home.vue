@@ -8,7 +8,7 @@
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
 import {getUrl} from "@/api/get.js"
-// import carousel1 from "@/components/carousel.vue";
+
 
 export default {
   name: "Home",
