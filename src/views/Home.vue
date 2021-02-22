@@ -9,7 +9,6 @@
 // import HelloWorld from "@/components/HelloWorld.vue";
 import {getUrl} from "@/api/get.js"
 
-
 export default {
   name: "Home",
   components: {
