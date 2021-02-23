@@ -39,10 +39,19 @@ export default {
   methods: {
     //点击圆点
     changePhoto(index) {
+      //清除计时
       clearInterval(this.num);
       this.currentIndex = index;
+      //等页面跳转以后再重新计时
       this.photoRun();
       console.log(this.currentIndex + ' ' + index);
+    },
+    //自动播放
+    photoRun() {
+      let interval = setInterval(() => {
+        this.photoNext();
+      }, 4000);
+      this.num = interval;
     },
     //上一张图片
     photoPrev() {
@@ -66,13 +75,7 @@ export default {
       }
     },
 
-    //自动播放
-    photoRun() {
-      let interval = setInterval(() => {
-        this.photoNext();
-      }, 4000);
-      this.num = interval;
-    },
+
 
   },
   data() {
@@ -86,7 +89,7 @@ export default {
       currentIndex: 0,
       index: 0,
       isShow: false,
-      num : ''
+      num: ""
     };
   }
 };
@@ -107,9 +110,9 @@ export default {
     position: relative;
   }
 
-  .swipe_list li {
-    list-style: none;
-  }
+.swipe_list li {
+  list-style: none;
+}
 
   .swipe_list li img {
     width: 100%;

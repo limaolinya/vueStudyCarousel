@@ -1,22 +1,19 @@
 <template>
   <div class="home">
+<!--    //carousel为子组件-->
     <carousel :urls="url"></carousel>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
-import {getUrl} from "@/api/get.js"
-
+import {getUrl} from "@/api/get.js"//得到get.js中的getUrl方法
 export default {
   name: "Home",
   components: {
   },
   data () {
     return {
-      url: [],
-      image: []
+      url: [],//父组件数据
     }
   },
   created() {
